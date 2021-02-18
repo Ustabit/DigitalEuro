@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<form method="GET" action="controller.php">
+			<div class="">				
+				<label>IBAN:</label><input type="text" name="iban"/>
+				<label>Password:</label><input type="text" name="password"/>		
+			</div>
+			<button type="submit" name="action" value="Login" class="btn btn-primary">Login</button>
+		</form>
+	
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createModal">
+		  Create Bank Account
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="createModalLabel">Create Account</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<form method="GET" action="controller.php">
+						<div class="modal-body">				
+							<label>Nachname:</label><input type="text" name="last_name"/>
+							<label>Vorname:</label><input type="text" name="first_name"/>		
+						</div>
+						<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="submit" name="action" value="Account" class="btn btn-primary">Create Account</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	
+	
+	
+		
+	</body>
+</html>
